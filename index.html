@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Platform Wireframe</title>
+    <!-- Add base tag for GitHub Pages -->
+    <base href="./">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Fallback CSS for GitHub Pages -->
+    <style>
+        /* Basic fallback styles in case external CSS fails to load */
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .wireframe-container { display: flex; min-height: 100vh; }
+        .wireframe-nav { width: 250px; background-color: #f0f0f0; padding: 20px; position: fixed; height: 100vh; overflow-y: auto; z-index: 100; }
+        .wireframe-nav ul { list-style: none; }
+        .wireframe-nav ul li { margin-bottom: 15px; }
+        .wireframe-nav ul li a { text-decoration: none; color: #333; padding: 8px 0; display: block; border-bottom: 1px solid #ddd; transition: all 0.3s; }
+        .wireframe-content { flex: 1; margin-left: 250px; padding: 20px; }
+        .wireframe-page { border: 1px dashed #ccc; padding: 20px; margin-bottom: 50px; background-color: #fff; min-height: 500px; position: relative; }
+        @media (max-width: 768px) { 
+            .wireframe-container { flex-direction: column; }
+            .wireframe-nav { width: 100%; height: auto; position: relative; }
+            .wireframe-content { margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wireframe-container">
+        <nav class="wireframe-nav">
+            <ul>
+                <li><a href="#homepage">Homepage</a></li>
+                <li><a href="#registration">Registration</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#kyc">KYC Verification</a></li>
+                <li><a href="#account-settings">Account Settings</a></li>
+                <li><a href="#deposit">Deposit</a></li>
+                <li><a href="#withdrawal">Withdrawal</a></li>
+                <li><a href="#internal-transfer">Internal Transfer</a></li>
+                <li><a href="#savings">Savings & Staking</a></li>
+                <li><a href="#conversion">Asset Conversion</a></li>
+                <li><a href="#history">Transaction History</a></li>
+                <li><a href="#message-center">Message Center</a></li>
+                <li><a href="#referral">Referral Program</a></li>
+            </ul>
+        </nav>
+
+        <main class="wireframe-content">
+            <!-- Homepage / Landing Page -->
+            <section id="homepage" class="wireframe-page">
+                <h2>Homepage / Landing Page</h2>
+                <div class="wireframe-component header">
+                    <div class="logo-placeholder">LOGO</div>
+                    <div class="nav-placeholder">
+                        <span>Language</span>
+                        <button class="btn-login">Login</button>
+                        <button class="btn-signup">Sign Up</button>
+                    </div>
+                </div>
+
+                <div class="wireframe-component hero">
+                    <h1>Your Financial Platform</h1>
+                    <p class="value-prop">Trade, Save, and Grow Your Digital Assets Securely</p>
+                    <button class="btn-cta">Get Started</button>
+                </div>
+
+                <div class="wireframe-component features">
+                    <div class="feature">
+                        <div class="feature-icon">Icon</div>
+                        <h3>Cryptocurrency Trading</h3>
+                        <p>Description text here</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">Icon</div>
+                        <h3>High-Yield Savings</h3>
+                        <p>Description text here</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">Icon</div>
+                        <h3>Secure Transactions</h3>
+                        <p>Description text here</p>
+                    </div>
+                </div>
+
+                <div class="wireframe-component trust-indicators">
+                    <div class="certification">Security Certification 1</div>
+                    <div class="certification">Security Certification 2</div>
+                    <div class="testimonial">User Testimonial</div>
+                </div>
+
+                <div class="wireframe-component footer">
+                    <div class="footer-links">
+                        <div>Terms of Service</div>
+                        <div>Privacy Policy</div>
+                        <div>Support</div>
+                    </div>
+                    <div class="social-links">
+                        <div>Social 1</div>
+                        <div>Social 2</div>
+                        <div>Social 3</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Registration Page -->
+            <section id="registration" class="wireframe-page">
+                <h2>Registration Page</h2>
+                <div class="registration-progress">
+                    <div class="step active">Step 1</div>
+                    <div class="step">Step 2</div>
+                    <div class="step">Step 3</div>
+                    <div class="step">Step 4</div>
+                    <div class="step">Step 5</div>
+                    <div class="step">Step 6</div>
+                </div>
+
+                <div class="registration-step step-1">
+                    <h3>Basic Information</h3>
+                    <div class="form-group">
+                        <label>Email/Username</label>
+                        <input type="text" placeholder="Enter email or username">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" placeholder="Enter password">
+                        <div class="password-strength">Password strength indicator</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" placeholder="Confirm password">
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="terms">
+                        <label for="terms">I accept the Terms of Service and Privacy Policy</label>
+                    </div>
+                    <button class="btn-next">Next</button>
+                </div>
+
+                <div class="registration-step step-2" style="display: none;">
+                    <h3>Contact Information</h3>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="text" placeholder="Enter phone number">
+                    </div>
+                    <div class="form-group">
+                        <label>SMS Verification Code</label>
+                        <div class="code-input-wrapper">
+                            <input type="text" placeholder="Enter code">
+                            <button class="btn-send-code">Send Code</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Notification Preferences</label>
+                        <div class="checkbox-group">
+                            <div>
+                                <input type="checkbox" id="notif-transactions" checked disabled>
+                                <label for="notif-transactions">Transaction notifications (required)</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="notif-security" checked disabled>
+                                <label for="notif-security">Security alerts (required)</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="notif-marketing">
+                                <label for="notif-marketing">Marketing messages</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="notif-updates">
+                                <label for="notif-updates">Platform updates</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button class="btn-back">Back</button>
+                        <button class="btn-next">Next</button>
+                    </div>
+                </div>
+
+                <div class="registration-step step-3" style="display: none;">
+                    <h3>KYC Verification Introduction</h3>
+                    <div class="verification-intro">
+                        <p>To comply with regulations and protect your account, we need to verify your identity.</p>
+                        <p>This information is securely processed and stored in accordance with our privacy policy.</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Document Type</label>
+                        <select>
+                            <option>Passport</option>
+                            <option>National ID</option>
+                            <option>Driver's License</option>
+                        </select>
+                    </div>
+                    <div class="verification-steps">
+                        <h4>Verification Process Steps:</h4>
+                        <ol>
+                            <li>Choose document type</li>
+                            <li>Upload document (front and back)</li>
+                            <li>Take a selfie</li>
+                            <li>Verify your address</li>
+                            <li>Review information</li>
+                        </ol>
+                    </div>
+                    <div class="form-actions">
+                        <button class="btn-back">Back</button>
+                        <button class="btn-next">Proceed to Verification</button>
+                    </div>
+                </div>
+
+                <div class="registration-step step-4" style="display: none;">
+                    <h3>External KYC Service Redirect</h3>
+                    <div class="redirect-info">
+                        <div class="loading-indicator">
+                            <div class="spinner"></div>
+                            <p>Preparing secure connection...</p>
+                        </div>
+                        <div class="security-info">
+                            <h4>Data Security Information</h4>
+                            <p>We will share the following information with our trusted verification partner:</p>
+                            <ul>
+                                <li>Your name and date of birth</li>
+                                <li>Government ID document</li>
+                                <li>Selfie/facial image</li>
+                                <li>Address information</li>
+                            </ul>
+                            <p>This data is encrypted and used only for identity verification purposes.</p>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button class="btn-back">Back</button>
+                        <button class="btn-next">Continue to External Verification</button>
+                    </div>
+                </div>
+
+                <div class="registration-step step-5" style="display: none;">
+                    <h3>Verification Status</h3>
+                    <div class="verification-status">
+                        <div class="status-icon success">✓</div>
+                        <p class="status-message">Verification Submitted Successfully</p>
+                        <p>Your identity verification information has been submitted.</p>
+                        <div class="status-details">
+                            <p><strong>Status:</strong> Pending Review</p>
+                            <p><strong>Estimated Time:</strong> 24-48 hours</p>
+                        </div>
+                    </div>
+                    <div class="notification-option">
+                        <div class="form-group">
+                            <input type="checkbox" id="status-updates" checked>
+                            <label for="status-updates">Receive verification status updates via SMS/WhatsApp</label>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button class="btn-back">Back</button>
+                        <button class="btn-next">Continue to Dashboard</button>
+                    </div>
+                </div>
+
+                <div class="registration-step step-6" style="display: none;">
+                    <h3>Account Setup Complete</h3>
+                    <div class="setup-complete">
+                        <div class="success-icon">✓</div>
+                        <h4>Congratulations!</h4>
+                        <p>Your account has been created successfully.</p>
+                        <div class="benefits">
+                            <h4>Account Benefits</h4>
+                            <ul>
+                                <li>Trade cryptocurrencies with low fees</li>
+                                <li>Earn interest on your digital assets</li>
+                                <li>Secure storage with multi-layer protection</li>
+                                <li>24/7 customer support</li>
+                            </ul>
+                        </div>
+                        <div class="tutorial-option">
+                            <button class="btn-tutorial">Take Quick Tutorial</button>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button class="btn-next">Go to Dashboard</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Login Page -->
+            <section id="login" class="wireframe-page">
+                <h2>Login Page</h2>
+                <div class="login-form">
+                    <div class="form-group">
+                        <label>Email/Username</label>
+                        <input type="text" placeholder="Enter email or username">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" placeholder="Enter password">
+                        <div class="show-hide">Show/Hide</div>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <button class="btn-login">Login</button>
+                    <div class="login-links">
+                        <a href="#">Forgot password?</a>
+                        <a href="#registration">Register new account</a>
+                    </div>
+                    <div class="biometric-login">
+                        <button class="btn-biometric">Login with Biometrics</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dashboard -->
+            <section id="dashboard" class="wireframe-page">
+                <h2>Dashboard</h2>
+                
+                <div class="dashboard-container">
+                    <!-- Sidebar Navigation -->
+                    <div class="dashboard-sidebar">
+                        <div class="sidebar-profile">
+                            <div class="profile-avatar">JD</div>
+                            <div class="profile-name">John Doe</div>
+                            <div class="verification-status">Verified</div>
+                        </div>
+                        
+                        <ul class="sidebar-nav">
+                            <li><a href="#dashboard" class="active"><span class="icon">📊</span> Dashboard</a></li>
+                            <li><a href="#deposit"><span class="icon">💰</span> Deposit</a></li>
+                            <li><a href="#withdrawal"><span class="icon">📤</span> Withdrawal</a></li>
+                            <li><a href="#conversion"><span class="icon">🔄</span> Convert</a></li>
+                            <li><a href="#internal-transfer"><span class="icon">↔️</span> Transfer</a></li>
+                            <li><a href="#savings"><span class="icon">📈</span> Investments</a></li>
+                            <li><a href="#history"><span class="icon">📜</span> History</a></li>
+                            <li><a href="#message-center"><span class="icon">✉️</span> Messages</a></li>
+                            <li><a href="#referral"><span class="icon">👥</span> Referrals</a></li>
+                            <li><a href="#account-settings"><span class="icon">⚙️</span> Settings</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Main Dashboard Content -->
+                    <div class="dashboard-main">
+                        <!-- Portfolio Overview Section -->
+                        <div class="portfolio-overview">
+                            <h3>Portfolio Overview 
+                                <button class="refresh-btn">
+                                    <span>↻</span> Refresh
+                                </button>
+                            </h3>
+                            
+                            <div class="portfolio-summary">
+                                <div class="chart-section">
+                                    <div class="donut-container">
+                                        <div class="donut-chart">
+                                            <div class="donut-hole">
+                                                <div class="donut-value">$24,395</div>
+                                                <div class="donut-label">Total</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="legend">
+                                        <div class="legend-item">
+                                            <div class="legend-color fiat"></div>
+                                            <div class="legend-text">
+                                                <span class="legend-label">Fiat</span>
+                                                <span class="legend-value">35% ($8,554.68)</span>
+                                            </div>
+                                        </div>
+                                        <div class="legend-item">
+                                            <div class="legend-color crypto"></div>
+                                            <div class="legend-text">
+                                                <span class="legend-label">Crypto</span>
+                                                <span class="legend-value">65% ($15,840.32)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="balance-tables">
+                                    <div class="balance-tabs">
+                                        <div class="balance-tab active" data-tab="crypto">Crypto Balance</div>
+                                        <div class="balance-tab" data-tab="fiat">Fiat Balance</div>
+                                    </div>
+                                    
+                                    <div id="crypto-balance" class="balance-content active">
+                                        <div class="balance-header">
+                                            <div class="balance-amount">$15,840.32</div>
+                                        </div>
+                                        
+                                        <table class="asset-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Asset</th>
+                                                    <th>Available</th>
+                                                    <th>Locked</th>
+                                                    <th>Earnings</th>
+                                                    <th>Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- Crypto assets will be populated by JavaScript -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                    <div id="fiat-balance" class="balance-content">
+                                        <div class="balance-header">
+                                            <div class="balance-amount">$8,554.68</div>
+                                        </div>
+                                        
+                                        <table class="asset-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Currency</th>
+                                                    <th>Available</th>
+                                                    <th>Locked</th>
+                                                    <th>Earnings</th>
+                                                    <th>Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- Fiat currencies will be populated by JavaScript -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Quick Actions -->
+                        <div class="quick-actions">
+                            <button class="btn-action">Deposit</button>
+                            <button class="btn-action">Withdraw</button>
+                            <button class="btn-action">Convert</button>
+                        </div>
+                        
+                        <div class="wireframe-component">
+                            <h3>Recent Transactions</h3>
+                            <div class="transaction-list">
+                                <div class="transaction">
+                                    <div>BTC Deposit</div>
+                                    <div>0.25 BTC</div>
+                                    <div>Feb 15, 2023</div>
+                                    <div>Completed</div>
+                                </div>
+                                <div class="transaction">
+                                    <div>USD Withdrawal</div>
+                                    <div>$1,200.00</div>
+                                    <div>Feb 12, 2023</div>
+                                    <div>Completed</div>
+                                </div>
+                                <div class="transaction">
+                                    <div>BTC to ETH Conversion</div>
+                                    <div>0.15 BTC → 2.3 ETH</div>
+                                    <div>Feb 10, 2023</div>
+                                    <div>Completed</div>
+                                </div>
+                                <div class="transaction">
+                                    <div>Staking Rewards</div>
+                                    <div>+0.012 BTC</div>
+                                    <div>Feb 8, 2023</div>
+                                    <div>Completed</div>
+                                </div>
+                                <div class="transaction">
+                                    <div>Referral Bonus</div>
+                                    <div>+$25.00</div>
+                                    <div>Feb 5, 2023</div>
+                                    <div>Completed</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="wireframe-component">
+                            <h3>News & Announcements</h3>
+                            <div class="news-item">
+                                <h4>Platform Maintenance Scheduled</h4>
+                                <p>System will be under maintenance on March 15, 2023 from 2am to 4am UTC.</p>
+                            </div>
+                            <div class="news-item">
+                                <h4>New Feature: Crypto Staking</h4>
+                                <p>Earn passive income with our new staking options for BTC, ETH, and SOL.</p>
+                            </div>
+                            <div class="news-item">
+                                <h4>Security Alert: Enable 2FA</h4>
+                                <p>Enhance your account security by enabling Two-Factor Authentication.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KYC Verification -->
+            <section id="kyc" class="wireframe-page">
+                <h2>KYC Verification</h2>
+                <div class="verification-status">
+                    <h3>Verification Status</h3>
+                    <div class="status-indicator">
+                        <div class="status-bar">
+                            <div class="status-progress" style="width: 30%;"></div>
+                        </div>
+                        <p>Status: Pending</p>
+                        <p>Estimated completion time: 24-48 hours</p>
+                    </div>
+                </div>
+
+                <div class="document-upload">
+                    <h3>Document Upload</h3>
+                    <div class="upload-instructions">
+                        <p>Please upload clear images of the following documents:</p>
+                        <ol>
+                            <li>Government-issued ID (front and back)</li>
+                            <li>Proof of address (utility bill, bank statement)</li>
+                            <li>Selfie holding your ID</li>
+                        </ol>
+                    </div>
+                    <div class="upload-section">
+                        <div class="upload-box">
+                            <p>ID Front</p>
+                            <button class="btn-upload">Upload</button>
+                        </div>
+                        <div class="upload-box">
+                            <p>ID Back</p>
+                            <button class="btn-upload">Upload</button>
+                        </div>
+                        <div class="upload-box">
+                            <p>Proof of Address</p>
+                            <button class="btn-upload">Upload</button>
+                        </div>
+                        <div class="upload-box">
+                            <p>Selfie with ID</p>
+                            <button class="btn-upload">Upload</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verification-submit">
+                    <button class="btn-submit">Submit for Verification</button>
+                </div>
+
+                <div class="support-contact">
+                    <h3>Need Help?</h3>
+                    <p>Contact our support team for assistance with verification.</p>
+                    <button class="btn-support">Contact Support</button>
+                </div>
+            </section>
+
+            <!-- Account Settings -->
+            <section id="account-settings" class="wireframe-page">
+                <h2>Account Settings</h2>
+                <div class="settings-tabs">
+                    <div class="tab active">Personal Information</div>
+                    <div class="tab">Security Settings</div>
+                    <div class="tab">Notification Preferences</div>
+                    <div class="tab">Language Settings</div>
+                </div>
+
+                <div class="settings-content">
+                    <div class="settings-content-panel" style="display: block;">
+                        <h3>Personal Information</h3>
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="text" placeholder="john.doe@example.com">
+                            <span class="verification-badge">Verified</span>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="text" placeholder="+1 (555) 123-4567">
+                            <span class="verification-badge">Verified</span>
+                        </div>
+                        <div class="form-group">
+                            <label>Date of Birth</label>
+                            <input type="text" placeholder="MM/DD/YYYY">
+                        </div>
+                        <div class="form-group">
+                            <label>Address</label>
+                            <textarea placeholder="123 Main St, City, Country"></textarea>
+                        </div>
+                        <button class="btn-save">Save Changes</button>
+                    </div>
+
+                    <div class="settings-content-panel" style="display: none;">
+                        <h3>Security Settings</h3>
+                        <div class="security-section">
+                            <h4>Change Password</h4>
+                            <div class="form-group">
+                                <label>Current Password</label>
+                                <input type="password" placeholder="Enter current password">
+                            </div>
+                            <div class="form-group">
+                                <label>New Password</label>
+                                <input type="password" placeholder="Enter new password">
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm New Password</label>
+                                <input type="password" placeholder="Confirm new password">
+                            </div>
+                            <button class="btn-save">Update Password</button>
+                        </div>
+
+                        <div class="security-section">
+                            <h4>Two-Factor Authentication</h4>
+                            <div class="tfa-status">
+                                <div class="status-icon enabled">✓</div>
+                                <div class="status-info">
+                                    <p>Two-Factor Authentication is <strong>Enabled</strong></p>
+                                    <p>Last verified: April 1, 2023</p>
+                                </div>
+                                <button class="btn-disable">Disable</button>
+                            </div>
+                            <div class="tfa-options">
+                                <div class="form-group">
+                                    <label>Verification Method</label>
+                                    <select>
+                                        <option>Authenticator App (Current)</option>
+                                        <option>SMS</option>
+                                        <option>Email</option>
+                                    </select>
+                                </div>
+                                <button class="btn-change">Change Method</button>
+                            </div>
+                        </div>
+
+                        <div class="security-section">
+                            <h4>Transaction Pin</h4>
+                            <div class="form-group">
+                                <label>Set Transaction PIN</label>
+                                <input type="password" placeholder="6-digit PIN" maxlength="6">
+                            </div>
+                            <button class="btn-save">Set PIN</button>
+                        </div>
+
+                        <div class="security-section">
+                            <h4>Session Management</h4>
+                            <div class="session-list">
+                                <div class="session current">
+                                    <div class="session-details">
+                                        <p><strong>Current Session</strong></p>
+                                        <p>Device: MacBook Pro</p>
+                                        <p>Location: New York, USA</p>
+                                        <p>Last Activity: Just now</p>
+                                    </div>
+                                </div>
+                                <div class="session">
+                                    <div class="session-details">
+                                        <p>Device: iPhone</p>
+                                        <p>Location: New York, USA</p>
+                                        <p>Last Activity: 2 hours ago</p>
+                                    </div>
+                                    <button class="btn-terminate">Terminate</button>
+                                </div>
+                            </div>
+                            <button class="btn-terminate-all">Terminate All Other Sessions</button>
+                        </div>
+                    </div>
+
+                    <div class="settings-content-panel" style="display: none;">
+                        <h3>Notification Preferences</h3>
+                        <div class="notification-section">
+                            <h4>Email Notifications</h4>
+                            <div class="notification-option">
+                                <input type="checkbox" id="email-transactions" checked disabled>
+                                <label for="email-transactions">Transaction Confirmations (Required)</label>
+                            </div>
+                            <div class="notification-option">
+                                <input type="checkbox" id="email-security" checked disabled>
+                                <label for="email-security">Security Alerts (Required)</label>
+                            </div>
+                            <div class="notification-option">
+                                <input type="checkbox" id="email-marketing" checked>
+                                <label for="email-marketing">Marketing Updates & Promotions</label>
+                            </div>
+                            <div class="notification-option">
+                                <input type="checkbox" id="email-newsletter" checked>
+                                <label for="email-newsletter">Newsletter</label>
+                            </div>
+                            <div class="notification-option">
+                                <input type="checkbox" id="email-news" checked>
+                                <label for="email-news">Platform News & Updates</label>
+                            </div>
+                        </div>
+
+                        <div class="notification-section">
+                            <h4>SMS Notifications</h4>
+                            <div class="notification-option">
+                                <input type="checkbox" id="sms-transactions" checked>
+                                <label for="sms-transactions">Transaction Confirmations</label>
+                            </div>
+                            <div class="notification-option">
+                                <input type="checkbox" id="sms-security" checked>
+                                <label for="sms-security">Security Alerts</label>
+                            </div>
+                            <div class="notification-option">
+                                <input type="checkbox" id="sms-marketing">
+                                <label for="sms-marketing">Marketing Updates & Promotions</label>
+                            </div>
+                        </div>
+
+                        <div class="notification-section">
+                            <h4>Push Notifications</h4>
+                            <div class="notification-option">
+                                <input type="checkbox" id="push-transactions" checked>
+                                <label for="push-transactions">Transaction Confirmations</label>
+                            </div>
+                            <div class="notification-option">
+                                <input type="checkbox" id="push-security" checked>
+                                <label for="push-security">Security Alerts</label>
+                            </div>
+                            <div class="notification-option">
+                                <input type="checkbox" id="push-price" checked>
+                                <label for="push-price">Price Alerts</label>
+                            </div>
+                            <div class="notification-option">
+                                <input type="checkbox" id="push-news">
+                                <label for="push-news">Platform News & Updates</label>
+                            </div>
+                        </div>
+                        <button class="btn-save">Save Preferences</button>
+                    </div>
+
+                    <div class="settings-content-panel" style="display: none;">
+                        <h3>Language Settings</h3>
+                        <div class="form-group">
+                            <label>Interface Language</label>
+                            <select>
+                                <option>English (US)</option>
+                                <option>Spanish</option>
+                                <option>French</option>
+                                <option>German</option>
+                                <option>Chinese (Simplified)</option>
+                                <option>Japanese</option>
+                                <option>Russian</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Currency Display</label>
+                            <select>
+                                <option>USD ($)</option>
+                                <option>EUR (€)</option>
+                                <option>GBP (£)</option>
+                                <option>JPY (¥)</option>
+                            </select>
+                            <p class="setting-info">All balances will be displayed in this currency</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Date Format</label>
+                            <select>
+                                <option>MM/DD/YYYY</option>
+                                <option>DD/MM/YYYY</option>
+                                <option>YYYY-MM-DD</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Time Format</label>
+                            <select>
+                                <option>12-hour (AM/PM)</option>
+                                <option>24-hour</option>
+                            </select>
+                        </div>
+                        <button class="btn-save">Save Preferences</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Deposit Hub -->
+            <section id="deposit" class="wireframe-page">
+                <h2>Deposit Hub</h2>
+                <div class="deposit-tabs">
+                    <div class="tab active">Cryptocurrency</div>
+                    <div class="tab">Cash Deposit</div>
+                    <div class="tab">Bank Transfer</div>
+                </div>
+
+                <div class="deposit-content">
+                    <div class="deposit-content-panel" style="display: block;">
+                        <h3>Deposit Cryptocurrency</h3>
+                        <div class="crypto-deposit-form">
+                            <div class="form-group">
+                                <label>Select Cryptocurrency</label>
+                                <select id="crypto-select">
+                                    <option value="">Select a cryptocurrency</option>
+                                    <option value="USDT">Tether (USDT)</option>
+                                    <option value="USDC">USD Coin (USDC)</option>
+                                    <option value="BTC">Bitcoin (BTC)</option>
+                                    <option value="ETH">Ethereum (ETH)</option>
+                                    <option value="BNB">Binance Coin (BNB)</option>
+                                    <option value="SOL">Solana (SOL)</option>
+                                    <option value="XRP">XRP</option>
+                                    <option value="TRX">TRON (TRX)</option>
+                                </select>
+                            </div>
+                            <div class="form-group" id="network-select-container" style="display:none;">
+                                <label>Network</label>
+                                <select id="network-select">
+                                    <!-- Networks will be populated based on selected cryptocurrency -->
+                                </select>
+                            </div>
+
+                            <div class="wallet-address" style="display:none;" id="wallet-address-container">
+                                <label>Wallet Address</label>
+                                <div class="address-display">
+                                    <p id="wallet-address">Please select a cryptocurrency and network first</p>
+                                    <button class="btn-copy">Copy</button>
+                                </div>
+                            </div>
+
+                            <div class="qr-code" style="display:none;" id="qr-code-container">
+                                <div class="qr-placeholder">QR CODE</div>
+                            </div>
+
+                            <div class="deposit-info" style="display:none;" id="deposit-info-container">
+                                <p><strong>Important:</strong> Only send <span id="selected-crypto">the selected cryptocurrency</span> to this address. Sending any other cryptocurrency may result in permanent loss.</p>
+                                <p>Minimum deposit amount: <span id="min-deposit">0.001</span> <span id="crypto-ticker">BTC</span></p>
+                                <p>Processing time: <span id="processing-time">1-6 confirmations (varies by network)</span></p>
+                                <div id="network-fee" style="margin-top: 10px; padding: 10px; background-color: #f8f9fa; border-radius: 4px;">
+                                    <p><strong>Network Fee:</strong> Variable based on blockchain congestion</p>
+                                </div>
+                            </div>
+                            
+                            <div class="transaction-actions">
+                                <button class="btn-customer-service"><span class="icon">💬</span> Contact Customer Service</button>
+                                <button class="btn-submit-transaction">Submit Deposit</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="deposit-content-panel" style="display: none;">
+                        <h3>Cash Deposit</h3>
+                        <div class="cash-deposit-form">
+                            <div class="form-group">
+                                <label>Amount</label>
+                                <input type="text" placeholder="Enter amount">
+                            </div>
+                            <div class="reference-code">
+                                <label>Reference Code</label>
+                                <div class="code-display">
+                                    <p>REF123456789</p>
+                                    <button class="btn-copy">Copy</button>
+                                </div>
+                                <p class="code-info">Use this reference code when making your deposit</p>
+                            </div>
+                            <div class="deposit-locations">
+                                <h4>Deposit Locations</h4>
+                                <div class="location">
+                                    <h5>Local Bank Branch</h5>
+                                    <p>Visit any branch of the following banks:</p>
+                                    <ul>
+                                        <li>Bank A</li>
+                                        <li>Bank B</li>
+                                        <li>Bank C</li>
+                                    </ul>
+                                </div>
+                                <div class="location">
+                                    <h5>Payment Centers</h5>
+                                    <p>Visit any of these payment centers:</p>
+                                    <ul>
+                                        <li>Payment Center X</li>
+                                        <li>Payment Center Y</li>
+                                        <li>Payment Center Z</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="proof-upload">
+                                <label>Upload Proof of Payment (Optional)</label>
+                                <button class="btn-upload">Upload Receipt</button>
+                            </div>
+                            
+                            <div class="transaction-actions">
+                                <button class="btn-customer-service"><span class="icon">💬</span> Contact Customer Service</button>
+                                <button class="btn-submit-transaction">Submit Deposit</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="deposit-content-panel" style="display: none;">
+                        <h3>Bank Transfer</h3>
+                        <div class="bank-deposit-form">
+                            <div class="bank-details">
+                                <h4>Bank Account Details</h4>
+                                <div class="detail-item">
+                                    <span class="label">Bank Name:</span>
+                                    <span class="value">Example Bank</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Account Name:</span>
+                                    <span class="value">Financial Platform Ltd</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Account Number:</span>
+                                    <span class="value">1234567890</span>
+                                    <button class="btn-copy">Copy</button>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="label">Routing/SWIFT:</span>
+                                    <span class="value">EXBKUS12345</span>
+                                    <button class="btn-copy">Copy</button>
+                                </div>
+                            </div>
+                            <div class="transfer-instructions">
+                                <h4>Important Instructions</h4>
+                                <ol>
+                                    <li>Include your reference code in the payment reference</li>
+                                    <li>Transfer exact amount only</li>
+                                    <li>Keep your receipt until funds are credited</li>
+                                </ol>
+                            </div>
+                            <div class="form-group">
+                                <label>Your Reference Code</label>
+                                <div class="code-display">
+                                    <p>BANKREF987654321</p>
+                                    <button class="btn-copy">Copy</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Expected Amount</label>
+                                <input type="text" placeholder="Enter transfer amount">
+                            </div>
+                            <div class="proof-upload">
+                                <label>Upload Proof of Transfer</label>
+                                <button class="btn-upload">Upload Receipt</button>
+                            </div>
+                            
+                            <div class="transaction-actions">
+                                <button class="btn-customer-service"><span class="icon">💬</span> Contact Customer Service</button>
+                                <button class="btn-notify btn-submit-transaction">Submit Deposit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Withdrawal Hub -->
+            <section id="withdrawal" class="wireframe-page">
+                <h2>Withdrawal Hub</h2>
+                <div class="withdrawal-tabs">
+                    <div class="tab active">Cryptocurrency</div>
+                    <div class="tab">Local Bank</div>
+                    <div class="tab">International</div>
+                </div>
+
+                <div class="withdrawal-content">
+                    <div class="withdrawal-content-panel" style="display: block;">
+                        <h3>Withdraw Cryptocurrency</h3>
+                        <div class="crypto-withdrawal-form">
+                            <div class="form-group">
+                                <label>Select Cryptocurrency</label>
+                                <select id="withdrawal-crypto-select">
+                                    <option value="">Select a cryptocurrency</option>
+                                    <option value="USDT">Tether (USDT)</option>
+                                    <option value="USDC">USD Coin (USDC)</option>
+                                    <option value="BTC">Bitcoin (BTC)</option>
+                                    <option value="ETH">Ethereum (ETH)</option>
+                                    <option value="BNB">Binance Coin (BNB)</option>
+                                    <option value="SOL">Solana (SOL)</option>
+                                    <option value="XRP">XRP</option>
+                                    <option value="TRX">TRON (TRX)</option>
+                                </select>
+                            </div>
+                            <div class="form-group" id="withdrawal-network-container" style="display:none;">
+                                <label>Network</label>
+                                <select id="withdrawal-network-select">
+                                    <!-- Networks will be populated based on selected cryptocurrency -->
+                                </select>
+                                <p class="network-warning" id="network-warning" style="display:none; color: #dc3545; font-size: 0.85em; margin-top: 5px;">
+                                    ⚠️ Make sure the recipient address matches the selected network to avoid loss of funds
+                                </p>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Wallet Address</label>
+                                <input type="text" placeholder="Enter wallet address">
+                                <button class="btn-address-book">Address Book</button>
+                            </div>
+                            <div class="form-group">
+                                <label>Amount</label>
+                                <div class="amount-input">
+                                    <input type="text" placeholder="0.00" id="withdrawal-amount">
+                                    <button class="btn-max">MAX</button>
+                                </div>
+                                <p class="available-balance" id="withdrawal-available-balance">Available: 0.00</p>
+                            </div>
+                            <div class="fee-display">
+                                <p>Network Fee: <span id="withdrawal-fee">0.0001 BTC</span></p>
+                                <p>You will receive: <span id="withdrawal-receive">0.0000 BTC</span></p>
+                            </div>
+                            
+                            <div class="withdrawal-info" style="margin: 20px 0; padding: 15px; background-color: #f0f8ff; border-radius: 4px; border: 1px solid #d1e7ff;">
+                                <h4>Important Information</h4>
+                                <ul style="margin-top: 10px; padding-left: 20px;">
+                                    <li>Withdrawal minimums apply based on cryptocurrency and network</li>
+                                    <li>Funds may take 1-60 minutes to arrive depending on the selected network</li>
+                                    <li>Network fees are variable and subject to blockchain congestion</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="transaction-actions">
+                                <button class="btn-customer-service"><span class="icon">💬</span> Contact Customer Service</button>
+                                <button class="btn-withdraw btn-submit-transaction">Submit Withdrawal</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="withdrawal-content-panel" style="display: none;">
+                        <h3>Local Bank Withdrawal</h3>
+                        <div class="bank-withdrawal-form">
+                            <div class="saved-accounts">
+                                <label>Saved Bank Accounts</label>
+                                <select>
+                                    <option>Select a saved account</option>
+                                    <option>My Bank Account (****1234)</option>
+                                    <option>Add new account</option>
+                                </select>
+                            </div>
+                            <div class="bank-details">
+                                <div class="form-group">
+                                    <label>Bank Name</label>
+                                    <input type="text" placeholder="Enter bank name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Account Number</label>
+                                    <input type="text" placeholder="Enter account number">
+                                </div>
+                                <div class="form-group">
+                                    <label>Account Holder Name</label>
+                                    <input type="text" placeholder="Enter account holder name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Amount</label>
+                                <input type="text" placeholder="0.00">
+                                <p class="available-balance">Available: $10,000.00</p>
+                            </div>
+                            <div class="form-group">
+                                <label>Purpose/Description</label>
+                                <input type="text" placeholder="What is this withdrawal for? (optional)">
+                            </div>
+                            <div class="fee-display">
+                                <p>Processing Fee: $2.50</p>
+                                <p>You will receive: $997.50</p>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="terms-withdrawal">
+                                <label for="terms-withdrawal">I confirm this is my account and the information is correct</label>
+                            </div>
+                            <div class="transaction-actions">
+                                <button class="btn-customer-service"><span class="icon">💬</span> Contact Customer Service</button>
+                                <button class="btn-withdraw btn-submit-transaction">Submit Withdrawal</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="withdrawal-content-panel" style="display: none;">
+                        <h3>International Wire Transfer</h3>
+                        <div class="intl-withdrawal-form">
+                            <div class="form-group">
+                                <label>Beneficiary Bank</label>
+                                <input type="text" placeholder="Enter bank name">
+                            </div>
+                            <div class="form-group">
+                                <label>Bank Address</label>
+                                <input type="text" placeholder="Enter bank address">
+                            </div>
+                            <div class="form-group">
+                                <label>SWIFT/BIC Code</label>
+                                <input type="text" placeholder="Enter SWIFT/BIC code">
+                            </div>
+                            <div class="form-group">
+                                <label>Beneficiary Name</label>
+                                <input type="text" placeholder="Enter beneficiary name">
+                            </div>
+                            <div class="form-group">
+                                <label>Beneficiary Account Number/IBAN</label>
+                                <input type="text" placeholder="Enter account number or IBAN">
+                            </div>
+                            <div class="form-group">
+                                <label>Beneficiary Address</label>
+                                <input type="text" placeholder="Enter beneficiary address">
+                            </div>
+                            <div class="form-group">
+                                <label>Amount</label>
+                                <input type="text" placeholder="0.00">
+                                <p class="available-balance">Available: $10,000.00</p>
+                            </div>
+                            <div class="form-group">
+                                <label>Currency</label>
+                                <select>
+                                    <option>USD</option>
+                                    <option>EUR</option>
+                                    <option>GBP</option>
+                                    <option>JPY</option>
+                                </select>
+                            </div>
+                            <div class="fee-display">
+                                <p>Wire Fee: $25.00</p>
+                                <p>Intermediate Bank Fee (estimated): $15.00</p>
+                                <p>Total Fees: $40.00</p>
+                                <p>You will receive: $960.00</p>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="terms-intl">
+                                <label for="terms-intl">I understand and accept the wire transfer terms</label>
+                            </div>
+                            <div class="transaction-actions">
+                                <button class="btn-customer-service"><span class="icon">💬</span> Contact Customer Service</button>
+                                <button class="btn-withdraw btn-submit-transaction">Submit Wire Transfer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Internal Transfer -->
+            <section id="internal-transfer" class="wireframe-page">
+                <h2>Internal Transfer</h2>
+                <div class="internal-transfer-form">
+                    <div class="form-group">
+                        <label>Recipient</label>
+                        <input type="text" placeholder="Username or email">
+                    </div>
+                    <div class="form-group">
+                        <label>Asset to Transfer</label>
+                        <select>
+                            <option>USD</option>
+                            <option>Bitcoin (BTC)</option>
+                            <option>Ethereum (ETH)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Amount</label>
+                        <input type="text" placeholder="0.00">
+                        <p class="available-balance">Available: $10,000.00</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Transfer Note (Optional)</label>
+                        <input type="text" placeholder="Add a note to the recipient">
+                    </div>
+                    <div class="fee-info">
+                        <p>Fee: $0.00</p>
+                    </div>
+                    <button class="btn-transfer">Transfer</button>
+                </div>
+            </section>
+
+            <!-- Savings & Staking -->
+            <section id="savings" class="wireframe-page">
+                <h2>Savings & Staking</h2>
+                <div class="products-listing">
+                    <div class="product">
+                        <h3>Bitcoin Savings</h3>
+                        <p class="interest-rate">APY: 5.5%</p>
+                        <p>Term: Flexible</p>
+                        <p>Minimum: 0.01 BTC</p>
+                        <button class="btn-subscribe">Subscribe</button>
+                    </div>
+                    <div class="product">
+                        <h3>Ethereum Staking</h3>
+                        <p class="interest-rate">APY: 7.2%</p>
+                        <p>Term: 30 days</p>
+                        <p>Minimum: 0.5 ETH</p>
+                        <button class="btn-subscribe">Subscribe</button>
+                    </div>
+                    <div class="product">
+                        <h3>USDT Savings</h3>
+                        <p class="interest-rate">APY: 12%</p>
+                        <p>Term: 90 days</p>
+                        <p>Minimum: 100 USDT</p>
+                        <button class="btn-subscribe">Subscribe</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Asset Conversion -->
+            <section id="conversion" class="wireframe-page">
+                <h2>Asset Conversion</h2>
+                <div class="conversion-form">
+                    <div class="form-group">
+                        <label>From</label>
+                        <select>
+                            <option>Bitcoin (BTC)</option>
+                            <option>Ethereum (ETH)</option>
+                            <option>US Dollar (USD)</option>
+                        </select>
+                        <input type="text" placeholder="0.00">
+                        <p class="available-balance">Available: 0.5 BTC</p>
+                    </div>
+                    <div class="swap-icon">↓↑</div>
+                    <div class="form-group">
+                        <label>To</label>
+                        <select>
+                            <option>Ethereum (ETH)</option>
+                            <option>Bitcoin (BTC)</option>
+                            <option>US Dollar (USD)</option>
+                        </select>
+                        <input type="text" placeholder="0.00" readonly>
+                    </div>
+                    <div class="conversion-details">
+                        <p>Exchange Rate: 1 BTC = 13.5 ETH</p>
+                        <p>Fee: 0.5%</p>
+                    </div>
+                    <button class="btn-convert">Convert</button>
+                </div>
+            </section>
+
+            <!-- Transaction History -->
+            <section id="history" class="wireframe-page">
+                <div class="history-header">
+                    <h2>Transaction History</h2>
+                    <div class="history-actions">
+                        <button class="btn-export">Export CSV</button>
+                    </div>
+                </div>
+                
+                <div class="history-summary">
+                    <div class="summary-card">
+                        <div class="summary-value">32</div>
+                        <div class="summary-label">Total Transactions</div>
+                        <div class="summary-icon deposits-icon"></div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-value">$12,580.45</div>
+                        <div class="summary-label">Total Deposits</div>
+                        <div class="summary-icon deposits-icon"></div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-value">$7,235.82</div>
+                        <div class="summary-label">Total Withdrawals</div>
+                        <div class="summary-icon withdrawals-icon"></div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-value">$5,344.63</div>
+                        <div class="summary-label">Net Balance</div>
+                        <div class="summary-icon balance-icon"></div>
+                    </div>
+                </div>
+
+                <div class="history-filters">
+                    <div class="form-group">
+                        <label>Date Range</label>
+                        <select>
+                            <option>Last 7 days</option>
+                            <option selected>Last 30 days</option>
+                            <option>Last 90 days</option>
+                            <option>Custom range</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Transaction Type</label>
+                        <select>
+                            <option>All</option>
+                            <option>Deposits</option>
+                            <option>Withdrawals</option>
+                            <option>Conversions</option>
+                            <option>Internal Transfers</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Currency</label>
+                        <select id="history-currency-filter">
+                            <option value="">All</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="USDT">USDT</option>
+                            <option value="USDC">USDC</option>
+                            <option value="BTC">BTC</option>
+                            <option value="ETH">ETH</option>
+                            <option value="BNB">BNB</option>
+                            <option value="SOL">SOL</option>
+                            <option value="XRP">XRP</option>
+                            <option value="TRX">TRX</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select>
+                            <option value="">All</option>
+                            <option value="Completed">Completed</option>
+                            <option value="Processing">Processing</option>
+                            <option value="Failed">Failed</option>
+                        </select>
+                    </div>
+                    <button class="btn-filter">Apply Filters</button>
+                </div>
+                
+                <div class="transaction-table">
+                    <div class="table-header">
+                        <div class="header-cell">Date</div>
+                        <div class="header-cell">Type</div>
+                        <div class="header-cell">Amount</div>
+                        <div class="header-cell">Currency</div>
+                        <div class="header-cell">Status</div>
+                        <div class="header-cell">Details</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="cell" data-label="Date">Apr 5, 2023</div>
+                        <div class="cell" data-label="Type">Deposit</div>
+                        <div class="cell" data-label="Amount">+0.25</div>
+                        <div class="cell" data-label="Currency">BTC</div>
+                        <div class="cell" data-label="Status">Completed</div>
+                        <div class="cell" data-label="Details"><button class="btn-details">View</button></div>
+                    </div>
+                    <div class="table-row">
+                        <div class="cell" data-label="Date">Apr 3, 2023</div>
+                        <div class="cell" data-label="Type">Withdrawal</div>
+                        <div class="cell" data-label="Amount">-100.00</div>
+                        <div class="cell" data-label="Currency">USDT</div>
+                        <div class="cell" data-label="Status">Completed</div>
+                        <div class="cell" data-label="Details"><button class="btn-details">View</button></div>
+                    </div>
+                    <div class="table-row">
+                        <div class="cell" data-label="Date">Apr 1, 2023</div>
+                        <div class="cell" data-label="Type">Conversion</div>
+                        <div class="cell" data-label="Amount">0.1 → 1.35</div>
+                        <div class="cell" data-label="Currency">BTC → ETH</div>
+                        <div class="cell" data-label="Status">Completed</div>
+                        <div class="cell" data-label="Details"><button class="btn-details">View</button></div>
+                    </div>
+                    <div class="table-row">
+                        <div class="cell" data-label="Date">Mar 28, 2023</div>
+                        <div class="cell" data-label="Type">Deposit</div>
+                        <div class="cell" data-label="Amount">+1,000.00</div>
+                        <div class="cell" data-label="Currency">USD</div>
+                        <div class="cell" data-label="Status">Completed</div>
+                        <div class="cell" data-label="Details"><button class="btn-details">View</button></div>
+                    </div>
+                    <div class="table-row">
+                        <div class="cell" data-label="Date">Mar 25, 2023</div>
+                        <div class="cell" data-label="Type">Withdrawal</div>
+                        <div class="cell" data-label="Amount">-500.00</div>
+                        <div class="cell" data-label="Currency">EUR</div>
+                        <div class="cell" data-label="Status">Completed</div>
+                        <div class="cell" data-label="Details"><button class="btn-details">View</button></div>
+                    </div>
+                    <div class="table-row">
+                        <div class="cell" data-label="Date">Mar 20, 2023</div>
+                        <div class="cell" data-label="Type">Deposit</div>
+                        <div class="cell" data-label="Amount">+2,500.00</div>
+                        <div class="cell" data-label="Currency">USD</div>
+                        <div class="cell" data-label="Status">Completed</div>
+                        <div class="cell" data-label="Details"><button class="btn-details">View</button></div>
+                    </div>
+                    <div class="table-row">
+                        <div class="cell" data-label="Date">Mar 15, 2023</div>
+                        <div class="cell" data-label="Type">Internal Transfer</div>
+                        <div class="cell" data-label="Amount">-250.00</div>
+                        <div class="cell" data-label="Currency">USDC</div>
+                        <div class="cell" data-label="Status">Completed</div>
+                        <div class="cell" data-label="Details"><button class="btn-details">View</button></div>
+                    </div>
+                </div>
+                
+                <div class="pagination">
+                    <button class="btn-page prev" disabled>Previous</button>
+                    <div class="page-numbers">
+                        <button class="btn-page active">1</button>
+                        <button class="btn-page">2</button>
+                        <button class="btn-page">3</button>
+                        <span class="page-ellipsis">...</span>
+                        <button class="btn-page">10</button>
+                    </div>
+                    <button class="btn-page next">Next</button>
+                </div>
+            </section>
+
+            <!-- Message Center -->
+            <section id="message-center" class="wireframe-page">
+                <h2>Message Center</h2>
+                <div class="message-tabs">
+                    <div class="tab active">Transactions</div>
+                    <div class="tab">System</div>
+                    <div class="tab">Promotions</div>
+                </div>
+                <div class="message-content">
+                    <div class="message-content-panel" style="display: block;">
+                        <div class="message-list">
+                            <div class="message unread">
+                                <div class="message-icon">📩</div>
+                                <div class="message-content">
+                                    <h4>Deposit Confirmed</h4>
+                                    <p>Your deposit of $500.00 has been confirmed.</p>
+                                    <div class="message-time">Apr 5, 2023</div>
+                                </div>
+                            </div>
+                            <div class="message">
+                                <div class="message-icon">📩</div>
+                                <div class="message-content">
+                                    <h4>Withdrawal Processed</h4>
+                                    <p>Your withdrawal of $200.00 has been processed.</p>
+                                    <div class="message-time">Apr 3, 2023</div>
+                                </div>
+                            </div>
+                            <div class="message">
+                                <div class="message-icon">📩</div>
+                                <div class="message-content">
+                                    <h4>Conversion Completed</h4>
+                                    <p>Your conversion of 0.1 BTC to ETH has been completed.</p>
+                                    <div class="message-time">Apr 1, 2023</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="message-content-panel" style="display: none;">
+                        <div class="message-list">
+                            <div class="message unread">
+                                <div class="message-icon">🔔</div>
+                                <div class="message-content">
+                                    <h4>Security Alert</h4>
+                                    <p>New login detected from a new device.</p>
+                                    <div class="message-time">Apr 2, 2023</div>
+                                </div>
+                            </div>
+                            <div class="message">
+                                <div class="message-icon">🔔</div>
+                                <div class="message-content">
+                                    <h4>Password Changed</h4>
+                                    <p>Your account password was successfully changed.</p>
+                                    <div class="message-time">Mar 15, 2023</div>
+                                </div>
+                            </div>
+                            <div class="message">
+                                <div class="message-icon">🔔</div>
+                                <div class="message-content">
+                                    <h4>Verification Complete</h4>
+                                    <p>Your account verification has been completed successfully.</p>
+                                    <div class="message-time">Mar 10, 2023</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="message-content-panel" style="display: none;">
+                        <div class="message-list">
+                            <div class="message">
+                                <div class="message-icon">🎁</div>
+                                <div class="message-content">
+                                    <h4>Special Offer: Reduced Trading Fees</h4>
+                                    <p>Enjoy 50% off trading fees for the next 7 days!</p>
+                                    <div class="message-time">Apr 4, 2023</div>
+                                </div>
+                            </div>
+                            <div class="message">
+                                <div class="message-icon">🎁</div>
+                                <div class="message-content">
+                                    <h4>New Asset Listed: XYZ Token</h4>
+                                    <p>We've just added XYZ Token to our platform.</p>
+                                    <div class="message-time">Mar 30, 2023</div>
+                                </div>
+                            </div>
+                            <div class="message">
+                                <div class="message-icon">🎁</div>
+                                <div class="message-content">
+                                    <h4>Referral Program Bonus</h4>
+                                    <p>Refer friends and earn double rewards until the end of the month!</p>
+                                    <div class="message-time">Mar 25, 2023</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification-settings">
+                    <button class="btn-settings">Notification Settings</button>
+                </div>
+            </section>
+
+            <!-- Referral Program -->
+            <section id="referral" class="wireframe-page">
+                <h2>Referral Program</h2>
+                <div class="referral-info">
+                    <h3>Invite Friends & Earn Rewards</h3>
+                    <p>Earn 20% of your friends' trading fees for 6 months.</p>
+                </div>
+                <div class="referral-code">
+                    <h3>Your Referral Code</h3>
+                    <div class="code-display">
+                        <p>FRIEND20</p>
+                        <button class="btn-copy">Copy</button>
+                    </div>
+                </div>
+                <div class="referral-link">
+                    <h3>Referral Link</h3>
+                    <div class="link-display">
+                        <p>https://platform.example.com/ref=FRIEND20</p>
+                        <button class="btn-copy">Copy</button>
+                    </div>
+                </div>
+                <div class="social-sharing">
+                    <h3>Share via</h3>
+                    <div class="share-buttons">
+                        <button class="btn-share">Facebook</button>
+                        <button class="btn-share">Twitter</button>
+                        <button class="btn-share">WhatsApp</button>
+                        <button class="btn-share">Email</button>
+                    </div>
+                </div>
+                <div class="referral-stats">
+                    <h3>Your Referrals</h3>
+                    <div class="stats-display">
+                        <div class="stat">
+                            <p class="stat-number">5</p>
+                            <p class="stat-label">Total Referrals</p>
+                        </div>
+                        <div class="stat">
+                            <p class="stat-number">3</p>
+                            <p class="stat-label">Active Referrals</p>
+                        </div>
+                        <div class="stat">
+                            <p class="stat-number">$120.50</p>
+                            <p class="stat-label">Total Earnings</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Processing Overlay -->
+    <div class="processing-overlay" id="processingOverlay">
+        <div class="processing-container">
+            <div class="spinner"></div>
+            <p id="processingMessage">Processing your transaction...</p>
+        </div>
+    </div>
+
+    <script src="./js/wireframe.js"></script>
+</body>
+</html> 
